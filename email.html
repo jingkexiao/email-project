@@ -13,10 +13,12 @@
   <body>
     <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <!--Menu column-->
+          <div class="col-md-3" id="menu-bar">
             <img id="user_image" src="https://www.citypng.com/public/uploads/preview/download-profile-user-round-orange-icon-symbol-png-11639594360ksf6tlhukf.png">
-            Welcome Back!
-            <div class="list-group">
+            Welcome Back, Lucien!<br>
+            <button type="button" class="btn btn-warning btn-rounded">Compose</button><br>
+              <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action" aria-current="true">
                   Inbox
                   <span class="badge bg-warning rounded-pill">20</span>
@@ -36,7 +38,7 @@
                    Trash
                 </a>
                    <span class="badge bg-primary rounded-pill"></span>
-                
+                <!--button group feature-->
                 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                     <button type="button" class="btn btn-secondary">Calendar</button>
                     <button type="button" class="btn btn-secondary">Tasks</button>
@@ -50,9 +52,11 @@
                     </div>
                 </div>
               </div><br>
-              <img src="https://i.etsystatic.com/29491429/r/il/42a2b1/3612671837/il_fullxfull.3612671837_kcc2.jpg">
+              <img src="https://i.etsystatic.com/29491429/r/il/42a2b1/3612671837/il_fullxfull.3612671837_kcc2.jpg"><br>
           </div>
-          <div class="col-md-3">
+
+          <!--Mailbox column-->
+          <div class="col-md-3" id="mailbox-bar">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <form class="search_bar" action="action_page.php">
                 <input class="searchbar" type="text" placeholder="Search for email" name="search">
@@ -61,45 +65,60 @@
             <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action" aria-current="true">
                   <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">October Meowsletter</h5>
-                    <small>3 days ago</small>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <h5 class="mb-1">Oct Meowsletter</h5>
+                    <small></small>
                   </div>
                   <p class="mb-1">Join us for the annual donation night where we celebrate our achievements.</p>
-                  <small>Dear user,</small>
+                  <small>11/22/22</small>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">
                   <div class="d-flex w-100 justify-content-between">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     <h5 class="mb-1">Lululemon</h5>
-                    <small class="text-muted">5 days ago</small>
                   </div>
                   <p class="mb-1">Autumn is finally here! Let's get your closet prepared!</p>
-                  <small class="text-muted">Did you know ...</small>
+                  <small class="text-muted">11/11/22</small>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">
                   <div class="d-flex w-100 justify-content-between">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     <h5 class="mb-1">Starbucks</h5>
-                    <small class="text-muted">7 days ago</small>
                   </div>
                   <p class="mb-1">Fallin' in love with you...Finally PSL is back and we are more than excited to share this exclusive secret recipe with you.</p>
-                  <small class="text-muted">Sippin' my ...</small>
+                  <small class="text-muted">11/5/22</small>
                 </a>
               </div>
           </div>
-          <div class="col-md-6">
+
+          <!--Detailed Mail Column-->
+          <div class="col-md-6" id="mail-text">
+            <!--Mailbox function buttons-->
+            <div class="mailbox-buttons">
+              <button class="btn"><i class="fa fa-window-minimize" aria-hidden="true"></i></button>
+              <button class="btn"><i class="fa fa-close" aria-hidden="true"></i></button>
+            </div>
             <h4>Chicago Cat Rescue: October Newsletter</h4>
-            <h7>To:xxx@gmail.com</h7><br>
-            <h7>From: chicagocatrescue@gmail.com</h7>
+                <h7>
+                    <img id="user_image" src="https://www.citypng.com/public/uploads/preview/download-profile-user-round-orange-icon-symbol-png-11639594360ksf6tlhukf.png" alt="from_user_image" class="left">
+                    <p><b>From:</b> chicagocatrescue@gmail.com<br>
+                       <b>To:</b> xxx@gmail.com</p>
+                </h7>
                 <p id="cat_news">We are hoping that in the next several weeks, we will have a holiday card available for purchase that benefits SPCR! Keep your eye on the SPCR Facebook page and the November Meowsletter for details!</p>
-                <img src="https://mcusercontent.com/939e02f8963be2be6bbed7c89/images/b1f1ee1a-9c8f-43e8-88bb-1c06ac35d17b.jpg" alt="cat_thank_you">
+                <img src="https://mcusercontent.com/939e02f8963be2be6bbed7c89/images/b1f1ee1a-9c8f-43e8-88bb-1c06ac35d17b.jpg" alt="cat_thank_you" id="cat-thanks">
                 <div class="reply_box">
-                    <label for="email_reply">Quick Reply</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    <button type="button" class="reply_button">Reply</button>
+                    <button type="button" class="btn-warning btn-rounded">Reply</button>
+                    <button class="btn"><i class="fa fa-reply-all"></i> Reply to All</button>
+                    <button class="btn"><i class="fa fa-trash"></i> Delete</button>
+                    <button class="btn"><i class="fa fa-folder"></i> Archive</button>
+                    <button class="btn"><i class="fa fa-arrow-left" aria-hidden="true"></i> Previous</button>
+                    <button class="btn">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
           </div>
-          </div>
         </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
